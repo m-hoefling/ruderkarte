@@ -129,7 +129,7 @@ def build_waterway_query(name, waypoints):
     west, east = min(longitudes) - 0.5, max(longitudes) + 0.5
     name = escape_overpass(name)
     selectors = "\n".join(
-        f'  way["waterway"~"^(river|canal)$"]["{key}"="{name}"]({south},{west},{north},{east});\n'
+        f'  way["waterway"~"^(river|canal|fairway)$"]["{key}"="{name}"]({south},{west},{north},{east});\n'
         f'  rel["type"="waterway"]["{key}"="{name}"];\n  way(r)({south},{west},{north},{east});'
         for key in ("name", "name:de", "name:en")
     )
