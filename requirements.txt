@@ -1,0 +1,4 @@
+folium==0.20.0
+networkx==3.5
+PyYAML==6.0.2
+requests==2.32.5

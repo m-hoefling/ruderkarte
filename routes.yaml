@@ -1,0 +1,39 @@
+routes:
+  - waterway: Rhine
+    start: Karlsruhe
+    end: Wesel
+    color: "#d62728"
+
+  - waterway: Elbe
+    start: Usti nad Labem
+    end: Dresden
+    color: "#1f77b4"
+
+  - waterway: Neckar
+    start: Plochingen
+    end: Pleidelsheim
+    color: "#2ca02c"
+
+  - waterway: Rhine
+    start: Konstanz
+    end: Basel
+    color: "#ff7f0e"
+
+  - waterway: Mosel
+    start: Konz
+    end: Koblenz
+    color: "#9467bd"
+
+  - waterway: Ems
+    start: Münster
+    end: Emden
+    color: "#8c564b"
+
+  - waterway: Spree
+    start: Fürstenwalde/Spree
+    end: Berlin
+    color: "#8c564b"
+
+  - waterway: Saar
+    start: Merzig
+    end: Konz

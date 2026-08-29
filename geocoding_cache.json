@@ -1,0 +1,77 @@
+{
+  "karlsruhe": {
+    "lat": 49.0068705,
+    "lon": 8.4034195,
+    "display_name": "Karlsruhe, Baden-Württemberg, Deutschland"
+  },
+  "wesel": {
+    "lat": 51.6576909,
+    "lon": 6.617087,
+    "display_name": "Wesel, Kreis Wesel, Nordrhein-Westfalen, Deutschland"
+  },
+  "usti nad labem": {
+    "lat": 50.6603327,
+    "lon": 14.0381357,
+    "display_name": "Ústí nad Labem, okres Ústí nad Labem, Ústecký kraj, Česko"
+  },
+  "dresden": {
+    "lat": 51.0493286,
+    "lon": 13.7381437,
+    "display_name": "Dresden, Sachsen, Deutschland"
+  },
+  "plochingen": {
+    "lat": 48.7214582,
+    "lon": 9.4164842,
+    "display_name": "Plochingen, GVV Plochingen, Landkreis Esslingen, Baden-Württemberg, 73207, Deutschland"
+  },
+  "pleidelsheim": {
+    "lat": 48.9596036,
+    "lon": 9.2045813,
+    "display_name": "Pleidelsheim, VVG der Stadt Freiberg am Neckar, Landkreis Ludwigsburg, Baden-Württemberg, 74385, Deutschland"
+  },
+  "konstanz": {
+    "lat": 47.659216,
+    "lon": 9.1750718,
+    "display_name": "Konstanz, VVG der Stadt Konstanz, Landkreis Konstanz, Baden-Württemberg, Deutschland"
+  },
+  "basel": {
+    "lat": 47.5581077,
+    "lon": 7.5878261,
+    "display_name": "Basel, Basel-Stadt, Schweiz/Suisse/Svizzera/Svizra"
+  },
+  "konz": {
+    "lat": 49.6984949,
+    "lon": 6.5736454,
+    "display_name": "Konz, Landkreis Trier-Saarburg, Rheinland-Pfalz, Deutschland"
+  },
+  "koblenz": {
+    "lat": 50.3533278,
+    "lon": 7.5943951,
+    "display_name": "Koblenz, Rheinland-Pfalz, Deutschland"
+  },
+  "münster": {
+    "lat": 51.9625101,
+    "lon": 7.6251879,
+    "display_name": "Münster, Nordrhein-Westfalen, Deutschland"
+  },
+  "emden": {
+    "lat": 53.3670541,
+    "lon": 7.2058304,
+    "display_name": "Emden, Niedersachsen, Deutschland"
+  },
+  "fürstenwalde/spree": {
+    "lat": 52.3580209,
+    "lon": 14.064985,
+    "display_name": "Fürstenwalde/Spree, Oder-Spree, Brandenburg, 15517, Deutschland"
+  },
+  "berlin": {
+    "lat": 52.5173885,
+    "lon": 13.3951309,
+    "display_name": "Berlin, Deutschland"
+  },
+  "merzig": {
+    "lat": 49.4427023,
+    "lon": 6.6374902,
+    "display_name": "Merzig, Landkreis Merzig-Wadern, Saarland, 66663, Deutschland"
+  }
+}
