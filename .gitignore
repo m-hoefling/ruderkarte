@@ -1,2 +1,7 @@
-*_cache
+*cache*
 *.venv
+config.py
+.env
+.env.local
+*.html
+*routes.yaml
