@@ -1,11 +1,11 @@
 routes:
   - waterway: Rhine
     start: Karlsruhe
-    end: Wesel
+    end: Zwolle
     color: "#d62728"
 
   - waterway: Elbe
-    start: Usti nad Labem
+    start: Melnik
     end: Dresden
     color: "#1f77b4"
 
@@ -37,3 +37,11 @@ routes:
   - waterway: Saar
     start: Merzig
     end: Konz
+
+  - waterway: Nahe
+    start: Oberhausen an der Nahe
+    end: Niederhausen
+
+  - waterway: Moldau
+    start: Rabyne
+    end: Melnik

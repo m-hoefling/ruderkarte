@@ -13,6 +13,16 @@ import requests
 import yaml
 from folium.features import GeoJson, GeoJsonPopup, GeoJsonTooltip
 
+# Load configuration
+try:
+    import config
+except ImportError:
+    raise RuntimeError(
+        "Configuration file 'config.py' not found.\n"
+        "Please copy 'config.example.py' to 'config.py' and fill in your API keys.\n"
+        "See config.example.py for details."
+    )
+
 GERMANY_BOUNDS = (47.27, 5.87, 55.06, 15.04)
 OVERPASS_URLS = (
     "https://overpass-api.de/api/interpreter",
@@ -318,7 +328,23 @@ def add_highlight_layer(map_object, features):
 def create_map(features, routes, output_path):
     south, west, north, east = GERMANY_BOUNDS
     map_object = folium.Map(tiles=None, control_scale=True, zoom_start=6)
-    folium.TileLayer("CartoDB positron", name="Base map", control=False).add_to(map_object)
+    # Determine tile source: prefer config.TILE_SOURCE (a dict), otherwise
+    # fall back to the legacy CARTO_API_KEY-based URL if present.
+    # Require a TILE_SOURCE dict in config.py. This must contain at least
+    # a 'tiles' URL template. See config.example.py for examples.
+    tile_cfg = getattr(config, "TILE_SOURCE", None)
+    if not tile_cfg:
+        raise RuntimeError("Please configure `TILE_SOURCE` in config.py (see config.example.py) and include a 'tiles' entry.")
+    tiles = tile_cfg.get("tiles")
+    if not tiles:
+        raise RuntimeError("config.TILE_SOURCE must contain a 'tiles' entry (URL template).")
+    attr = tile_cfg.get("attr")
+    name = tile_cfg.get("name", "Base map")
+    # Pass remaining keys as TileLayer options (detect_retina, max_zoom, subdomains, etc.)
+    options = {k: v for k, v in tile_cfg.items() if k not in ("tiles", "attr", "name")}
+
+    folium.TileLayer(tiles=tiles, name=name, control=False, attr=attr, **options).add_to(map_object)
+    
     #for latitude, longitude, name in CITIES:
     #    folium.CircleMarker((latitude, longitude), radius=4, color="#202020", fill=True, fill_color="#ffffff", fill_opacity=1, tooltip=name).add_to(map_object)
     for route in routes:
